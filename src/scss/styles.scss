@@ -1,0 +1,174 @@
+@import '_variables';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    height: 100vh; //최상위 태그를 %로 주면 사이즈를 못잡음
+    width: 100%;
+    display: flex;
+}
+
+header {
+    height: 100%;
+    width: 33%;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    justify-content: space-around;
+    padding: 50px 50px 0px 70px;
+    color: $red;
+
+    h2 {
+        width: 100%;
+        height: 35%;
+        font-size: 4rem;
+        text-align: start;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+    }
+
+    div {
+        width: 80%;
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        span {
+            font-size: 1.3rem;
+            flex-wrap: wrap;
+            word-wrap: normal;
+        }
+        p {
+            text-align: justify;
+            font-size: 0.9rem;
+        }
+    }
+
+    ul {
+        width: 75%;
+        color: black;
+        font-size: 0.75rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        opacity: 0.7;
+        li {
+            padding: 10px 10px 3px 0px;
+            border-bottom: 1.5px solid rgba($color: #000000, $alpha: 0.7);
+        }
+    }
+}
+
+main {
+    background-color: $red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    .movie {
+        background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.1) 5%,
+                transparent
+            )
+            $red;
+        height: 160vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: $white;
+        padding: 0px 120px;
+
+        .movie-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 10px;
+            span:first-child {
+                font-size: 1.5rem;
+            }
+        }
+        .movie-clip {
+            width: 100%;
+            height: 60%;
+            img {
+                width: 100%;
+                height: 100%;
+                box-shadow: 0 80px 80px -90px black;
+            }
+        }
+        .movie-subtext {
+            font-size: 0.7rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding-top: 15px;
+            padding-right: 5px;
+            span {
+                padding-left: 10px;
+            }
+            i:last-child {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1065px) {
+    main {
+        font-size: 15px;
+        .movie {
+            height: 80vh;
+            padding: 0px 60px;
+            .movie-info {
+                padding-bottom: 5px;
+                span:first-child {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 15px;
+    }
+    body {
+        display: block;
+    }
+
+    header {
+        width: 100%;
+        min-width: unset;
+        padding: 20px 10px 20px 30px;
+        h2 {
+            font-size: 4em;
+        }
+    }
+
+    main {
+        width: 100%;
+        overflow-y: unset;
+
+        .movie {
+            height: 500px;
+            padding: 5% 5%;
+            .movie-info {
+                padding-bottom: 5px;
+                span:nth-child(2) {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}
