@@ -16,6 +16,10 @@
 
 https://besthorrorscenes.com/
 
+# 결과
+
+https://rheech22.github.io/clone_website_SCSS_1/
+
 # 기록
 
 -   반응형 디자인 연습을 위한 미디어쿼리 적용
